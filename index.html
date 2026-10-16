@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>رمضان 2027 - عبداللطيف</title>
+<style>
+body{margin:0;font-family:Arial;background:linear-gradient(180deg,#0b0033,#1a0066,#33004d);color:#fff;text-align:center;overflow:hidden;min-height:100vh}
+.moon{position:absolute;top:35px;left:25px;font-size:70px;animation:float 3s ease-in-out infinite;z-index:1}
+.star{position:absolute;color:#ffe600;animation:fall linear infinite;z-index:1}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-15px)}}
+@keyframes fall{to{transform:translateY(110vh) rotate(360deg)}}
+.card{position:relative;z-index:2;background:rgba(255,255,255,0.12);border:2px solid #ffe600;border-radius:20px;padding:28px;max-width:380px;margin:90px auto 20px;backdrop-filter:blur(5px)}
+h1{font-size:34px;text-shadow:0 0 10px #ffe600,0 0 20px #ff0000,0 0 30px #00aaff}
+.btn{background:linear-gradient(90deg,#ffe600,#ff0000,#00aaff,#a200ff);color:#fff;border:none;padding:14px 24px;font-size:18px;font-weight:bold;border-radius:30px;cursor:pointer;box-shadow:0 0 15px #ffe600}
+.credit{margin-top:22px;font-weight:bold;font-size:19px;animation:glow 1.5s infinite alternate;line-height:1.8}
+@keyframes glow{from{text-shadow:0 0 10px #ffe600,0 0 20px #007bff}to{text-shadow:0 0 15px #ff0000,0 0 30px #a200ff,0 0 40px #ffe600}}
+</style>
+</head>
+<body>
+<div class="moon">🌙</div>
+
+<iframe width="0" height="0" src="https://www.youtube.com/embed/hbMjIlSmyUE?autoplay=1&loop=1&playlist=hbMjIlSmyUE" allow="autoplay" style="border:0"></iframe>
+
+<script>
+for(let i=0;i<45;i++){let s=document.createElement('div');s.className='star';s.innerHTML='★';s.style.left=Math.random()*100+'vw';s.style.top=-Math.random()*100+'px';s.style.fontSize=(10+Math.random()*22)+'px';s.style.animationDuration=(3+Math.random()*5)+'s';document.body.appendChild(s)}
+function createCard(){let n=prompt('اكتب اسمك لإنشاء بطاقتك:','عبداللطيف');if(n){document.getElementById('fromName').innerText='من: '+n}}
+</script>
+
+<div class="card">
+<h1>🌙 رمضان كريم ⭐</h1>
+<p id="fromName" style="font-size:22px;font-weight:bold">من: عبداللطيف</p>
+<p>كل عام وأنتم بخير</p>
+<p>تقبل الله منا ومنكم صالح الأعمال</p>
+<p>اللهم بلغنا رمضان لا فاقدين ولا مفقودين</p>
+<button class="btn" onclick="createCard()">إنشاء بطاقتي</button>
+<div class="credit">تصميم وبرمجة<br>عبداللطيف بشيبش</div>
+</div>
+</body>
+  </html>
